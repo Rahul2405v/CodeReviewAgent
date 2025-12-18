@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Review Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Code Review Agent</h1>
+            <p>Get instant AI-powered code analysis and improvements</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>Your Code</h2>
+                <textarea id="codeInput" placeholder="Paste your Python code here..."></textarea>
+                <button id="reviewBtn" class="btn-primary">
+                    <span id="btnText">Review Code</span>
+                    <span id="btnLoader" class="loader hidden"></span>
+                </button>
+            </div>
+
+            <div class="output-section hidden" id="outputSection">
+                <h2>Review Results</h2>
+                
+                <div class="result-card">
+                    <h3>📋 Issues Found</h3>
+                    <ul id="issuesList" class="issues-list"></ul>
+                </div>
+
+                <div class="result-card">
+                    <h3>✨ Improved Code</h3>
+                    <pre id="improvedCode" class="code-block"></pre>
+                    <button id="copyBtn" class="btn-secondary">Copy Code</button>
+                </div>
+
+                <div class="result-card">
+                    <h3>📊 Quality Score</h3>
+                    <div class="score-container">
+                        <div class="score-circle" id="scoreCircle">
+                            <span id="scoreValue">0</span>
+                        </div>
+                        <p id="scoreText" class="score-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-section hidden" id="errorSection">
+                <div class="error-card">
+                    <h3>⚠️ Error</h3>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
